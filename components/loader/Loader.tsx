@@ -3,9 +3,22 @@
 import { AnimatePresence, motion } from "framer-motion";
 import LoaderWordmark from "./LoaderWordmark";
 import useLoading from "@/lib/hooks/useLoading";
+import { useEffect } from "react";
+import { useAppTransition } from "../providers/AppTransitionProvider";
 
 export default function Loader() {
   const loading = useLoading();
+  const { setReady } = useAppTransition();
+
+  useEffect(() => {
+  if (!loading) {
+    const timer = setTimeout(() => {
+      setReady(true);
+    }, 250);
+
+    return () => clearTimeout(timer);
+  }
+}, [loading, setReady]);
 
   return (
     <AnimatePresence>

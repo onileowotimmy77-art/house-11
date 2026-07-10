@@ -33,7 +33,7 @@
 
 *{
   margin-left: 3px;
-  
+  margin-right: 3px;
   padding: 0px;
   box-sizing:border-box;
 }
@@ -82,4 +82,15 @@ body{
 
 *{
   cursor:none !important;
+}
+
+em {
+  font-style: italic;
+  color: rgba(255,255,255,.92);
+}
+
+#hero-text {
+  display: block;
+  width: 390px;
+  height: 100px;
 }

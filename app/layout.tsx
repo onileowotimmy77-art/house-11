@@ -5,6 +5,15 @@ import { CursorProvider } from "@/components/cursor/CursorProvider";
 import { AnimationProvider } from "@/lib/animation/AnimationProvider";
 import Cursor from "@/components/cursor/Cursor";
 import LenisProvider from "@/components/providers/LenisProvider";
+import {
+  AppTransitionProvider,
+} from "@/components/providers/AppTransitionProvider";
+import {
+  geist,
+  mono,
+  editorial,
+} from "./fonts";
+import { AmbientProvider } from "@/src/components/ambient/AmbientProvider";
 
 
 
@@ -36,16 +45,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${inter.variable} ${ibmMono.variable}`} >
-        <CursorProvider>
-          <AnimationProvider>
-            <Cursor />
+      <body
+        className={`${spaceGrotesk.variable} ${inter.variable} ${ibmMono.variable}
+          ${geist.variable}
+          ${mono.variable}
+          ${editorial.variable}
+          bg-black
+          text-white
+          antialiased
+        `}
+      >
 
-            <LenisProvider>
-              {children}
-            </LenisProvider>
-          </AnimationProvider>
-        </CursorProvider>
+      
+      
+          <div className="relative z-10">
+            <AppTransitionProvider>
+              <CursorProvider>
+                <AnimationProvider>
+                  <Cursor />
+                
+                  <LenisProvider>
+                    {children}
+                  </LenisProvider>
+              
+                </AnimationProvider>
+              </CursorProvider>
+            </AppTransitionProvider>
+          </div>
+       
+
       </body>
     </html>
   );

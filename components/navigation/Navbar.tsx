@@ -34,6 +34,7 @@ z-50
 w-full
 transition-all
 duration-500
+mx-8
 ${
 scrolled
 ? "border-b border-white/10 bg-black/50 backdrop-blur-xl"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { transition } from "@/src/lib/motion"; 
 
 interface FadeUpProps {
   children: React.ReactNode;
@@ -13,12 +14,21 @@ export default function FadeUp({
 }: FadeUpProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.3,
+      }}
       transition={{
-        duration: 0.9,
+        ...transition,
         delay,
-        ease: [0.22, 1, 0.36, 1],
       }}
     >
       {children}

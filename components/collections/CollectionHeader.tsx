@@ -11,7 +11,7 @@ export default function CollectionHeader() {
       mx-auto
       mb-24 
       flex
-      max-w-3xl
+    
       flex-col
       items-center
       text-center

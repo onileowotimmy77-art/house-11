@@ -29,7 +29,7 @@ export default function ManifestoContent() {
       </Reveal>
 
       <Reveal>
-        <p className="font-mono uppercase tracking-[0.45em] text-white/40">
+        <p className="font-mono uppercase tracking-[0.45em] mt-10 text-white/40">
           HOUSE ELEVEN MANIFESTO
         </p>
       </Reveal>
@@ -70,7 +70,7 @@ export default function ManifestoContent() {
       </Reveal>
 
       <Reveal>
-        <div className="mt-32 flex items-center gap-6">
+        <div className="mt-5 flex items-center gap-6">
           <div className="h-px w-56 bg-white/20" />
 
           <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-white/40">

@@ -11,9 +11,6 @@ return (
         HOUSE ELEVEN
     </h1>
 </MagneticLink>
-<p className="mt-1 font-mono text-[10px] uppercase tracking-[0.35em] text-white/40">
-EST. 2026
-</p>
 </div>
 );
 }

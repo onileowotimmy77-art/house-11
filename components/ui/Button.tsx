@@ -26,8 +26,9 @@ export default function Button({
           text-xs
           uppercase
           tracking-[0.35em]
-          transition-all
-          duration-300
+         
+          duration-500
+          ease-out
           hover:bg-white
           hover:text-black
           `,

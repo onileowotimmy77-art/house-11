@@ -1,79 +1,95 @@
 "use client";
 
+import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
-import Reveal from "@/components/motion/Reveal";
-import Stagger from "@/components/motion/Stagger";
+import Entrance from "@/components/motion/Entrance";
 import { useCursorContext } from "@/components/cursor/CursorProvider";
-import Parallax from "@/components/motion/Parallax";
 
 export default function HeroContent() {
-  const {
-    setLabel,
-    setHovering,
-  } = useCursorContext();
+  const { setHovering, setLabel } = useCursorContext();
 
   return (
-    <div className="flex flex-col justify-center">
-      <Stagger>
-        <Reveal>
-          
+    <Container className="h-full">
+      <div
+        className="
+          flex
+          h-full
+          items-end
+          pb-20
+          -mt-45
+        "
+      >
+        <div
+          className="
+            
+            max-w-5xl
+            space-y-10
+          "
+        >
+          {/* Headline */}
+          <Entrance delay={0.5}>
             <h1
-                className="
-                mt-6 lg:mt-12
-                max-w-[8ch]
-                font-extrabold
+              className="
+                max-w-4xl
+              
+                font-black
                 uppercase
                 tracking-[-0.06em]
                 leading-[0.88]
-                text-[clamp(3.8rem,6vw,7.5rem)]
-                "
+                text-[clamp(2.8rem,5.7vw,10rem)]
+              "
             >
-                EVERY
-                <br />
-                HOUSE
-                <br />
-                BEGINS
-                <br />
-                SOMEWHERE.
+              FOR
+              <br />
+              THOSE
+              <br />
+              WHO MOVE
+              <br />
+              FIRST.
             </h1>
-         
-        </Reveal>
+          </Entrance>
 
-        <Reveal>
-          
+          {/* Description */}
+          <Entrance delay={0.8}>
             <p
-                className="
-                mt-10
-                max-w-lg
+              id="hero-text"
+              className="
+                max-w-xl
+                -mt-5
+                -mb-10
                 text-lg
                 leading-8
                 text-white/65
-                "
+                
+              "
             >
-                A modern fashion and creative house built for the next generation.
+             
+            A modern luxury fashion house crafting
+            timeless essentials for ambitious individuuals
+              
             </p>
-        
-        </Reveal>
+          </Entrance>
 
-        <Reveal>
-            
-                <div className="mt-12 lg:mt-16">
-                    <Button
-                    onMouseEnter={() => {
-                        setHovering(true);
-                        setLabel("ENTER");
-                    }}
-                    onMouseLeave={() => {
-                        setHovering(false);
-                        setLabel("");
-                    }}
-                    >
-                    ENTER THE HOUSE
-                    </Button>
-                </div>
-         
-        </Reveal>
-      </Stagger>
-    </div>
+          {/* CTA */}
+          <Entrance delay={1.1}>
+            <div>
+              <Button 
+              
+                onMouseEnter={() => {
+                  setHovering(true);
+                  setLabel("ENTER");
+                }}
+                onMouseLeave={() => {
+                  setHovering(false);
+                  setLabel("");
+                }}
+              >
+                ENTER THE HOUSE
+              </Button>
+            </div>
+          </Entrance>
+        </div>
+      </div>
+    </Container>
   );
 }

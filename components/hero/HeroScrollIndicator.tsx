@@ -1,30 +1,87 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Entrance from "../motion/Entrance";
 
 export default function HeroScrollIndicator() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: [0.35, 1, 0.35],
-        y: [0, 8, 0],
-      }}
-      transition={{
-        duration: 2.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-      className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      aria-hidden="true"
-    >
-      <div className="flex flex-col items-center gap-4">
-        <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-white/40">
-          Scroll
-        </span>
+  const [hidden, setHidden] = useState(false);
 
-        <div className="h-12 w-px bg-white/30" />
-      </div>
-    </motion.div>
+  useEffect(() => {
+    const handleScroll = () => {
+      setHidden(window.scrollY > 80);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <Entrance delay={1.6}>
+      <motion.div
+        animate={{
+          opacity: hidden ? 0 : 1,
+          y: hidden ? 30 : 0,
+        }}
+        transition={{
+          duration: 0.45,
+          ease: "easeOut",
+        }}
+        className="
+          fixed
+          bottom-12
+          left-1/2
+          z-30
+          -translate-x-1/2
+        "
+      >
+        <motion.div
+          animate={{
+            y: [0, 8, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="flex flex-col items-center gap-4"
+        >
+          <span
+            className="
+              font-mono
+              text-[10px]
+              uppercase
+              tracking-[0.45em]
+              text-white/40
+            "
+          >
+            SCROLL
+          </span>
+
+          <div className="relative h-12 w-px overflow-hidden bg-white/20">
+            <motion.div
+              animate={{
+                y: [-12, 48],
+              }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="
+                absolute
+                left-1/2
+                h-2
+                w-2
+                -translate-x-1/2
+                rounded-full
+                bg-white
+              "
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+    </Entrance>
   );
 }
