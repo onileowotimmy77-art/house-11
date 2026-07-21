@@ -9,6 +9,7 @@ import Container from "@/components/layout/Container";
 import JournalContent from "./JournalContent";
 
 import FadeUp from "@/components/ui/FadeUp";
+import { imageReveal } from "@/lib/animations";
 
 export default function JournalHero() {
   return (
