@@ -33,7 +33,7 @@ export default function Loader() {
             opacity: 0,
             y: -60,
             transition: {
-              duration: 3,
+              duration: Mot
               ease: [0.22, 1, 0.36, 1],
             },
           }}
