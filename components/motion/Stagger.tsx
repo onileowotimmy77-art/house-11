@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { stagger } from "@/lib/animations";
+import { MotionViewport } from "@/lib/motion";
 
 interface StaggerProps {
   children: ReactNode;
@@ -19,8 +20,8 @@ export default function Stagger({
       initial="hidden"
       whileInView="show"
       viewport={{
-        once: ,
-        amount: 0.25,
+        once: MotionViewport.once,
+        amount: MotionViewport.amount,
       }}
       className={className}
     >
