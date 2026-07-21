@@ -3,7 +3,7 @@ import Section from "@/components/layout/Section";
 
 export default function ManifestoArrival() {
   return (
-    <Section padding="py-[45vh]">
+    <Section padding="lg">
       <Container>
         <p
           className="
