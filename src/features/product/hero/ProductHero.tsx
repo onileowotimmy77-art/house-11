@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 import type { Product } from "@/src/data/products";
-import { Display } from "@/components/ui/typography";
+import { Body, Display } from "@/components/ui/typography";
 
 interface ProductHeroProps {
   product: Product;
@@ -125,17 +125,16 @@ const y = useTransform(
           >
             {product.name}
           </Display>
-        <p
+        <Body
   className="
     mt-16
     max-w-xl
     text-[clamp(1.5rem,2vw,2rem)]
-    leading-[1.6]
     text-white/90
   "
 >
   Designed as the defining garment of {product.chapter}.
-</p>
+</Body>
         </Container>
       </Section>
     </>
