@@ -1,24 +1,26 @@
+import {
+  SectionSpacing,
+  type SectionSpacingKey,
+} from "@/lib/spacing";
+
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  padding?: string;
+  padding?: SectionSpacingKey;
 }
 
 export default function Section({
   children,
   className = "",
-  padding = "py-40",
+  padding = "lg",
 }: SectionProps) {
   return (
     <section
       className={`
-       
         relative
-        overflow-hidden
         bg-black
-        
         text-white
-        ${padding}
+        ${SectionSpacing[padding]}
         ${className}
       `}
     >
