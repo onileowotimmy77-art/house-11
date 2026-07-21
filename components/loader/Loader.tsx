@@ -15,7 +15,7 @@ export default function Loader() {
   if (!loading) {
     const timer = setTimeout(() => {
       setReady(true);
-    }, 250);
+    }, MotionDelay.loaderComplete * 1000);
 
     return () => clearTimeout(timer);
   }
