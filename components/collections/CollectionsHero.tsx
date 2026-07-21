@@ -11,7 +11,7 @@ import {
 export default function CollectionsHero() {
   return (
     <Section
-      padding="pt-40 pb-32"
+      customPadding="pt-40 pb-32"
       className="min-h-[85vh] flex items-center"
     >
       <Container>
