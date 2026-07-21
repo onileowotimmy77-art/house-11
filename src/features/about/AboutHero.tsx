@@ -16,7 +16,7 @@ import { fadeUp } from "@/lib/animations";
 export default function AboutHero() {
   return (
     <Section
-     customPadding="py-0"
+     
       className="min-h-screen mt-30 flex items-center"
     >
       <Container>
