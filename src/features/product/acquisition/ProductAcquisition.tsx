@@ -56,7 +56,7 @@ export default function ProductAcquisition({
 
           <p
   className="
-    mb-6
+    my-6
     font-mono
     text-[11px]
     uppercase
@@ -68,7 +68,7 @@ export default function ProductAcquisition({
 </p>
           <div
             className="
-              mt-16
+              mt-10
               flex
               flex-wrap
               gap-4
