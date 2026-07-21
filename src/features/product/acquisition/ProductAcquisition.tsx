@@ -45,7 +45,7 @@ export default function ProductAcquisition({
 
           <p
             className="
-              mt-10
+              my-10
               text-xl
               font-medium
               text-wgite/65
