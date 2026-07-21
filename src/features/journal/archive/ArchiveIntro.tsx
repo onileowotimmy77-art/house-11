@@ -10,7 +10,7 @@ import {
   Eyebrow,
 } from "@/components/ui/typography";
 
-import { fadeUp } from "@/lib/animations";
+
 
 export default function ArchiveIntro() {
   return (
@@ -30,7 +30,7 @@ export default function ArchiveIntro() {
         >
           Every publication issued
           by the House is preserved here
-          as part of its permanent editorial record.
+          as part of its permanent editorial.
         </Display>
 
         <Body
