@@ -5,6 +5,7 @@ import Image from "next/image";
 import EditorialSection from "@/components/editorial/EditorialSection";
 import EditorialLink from "@/components/editorial/EditorialLink";
 import { Eyebrow, Display, Body } from "@/components/ui/typography";
+import Sect
 
 import type { JournalContent } from "@/src/data/journal-content";
 
