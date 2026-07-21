@@ -2,8 +2,9 @@
 
 import { useCallback } from "react";
 import { useCursorContext } from "./CursorProvider";
+import { CursorLabel } from "@/lib/cursor";
 
-export default function useCursorTarget(label: string) {
+export default function useCursorTarget(label: CursorLabel) {
   const { setHovering, setLabel } = useCursorContext();
 
   const onMouseEnter = useCallback(() => {

@@ -1,28 +1,57 @@
+import { CursorLabel, CursorLabels } from "@/lib/cursor";
+
 export interface NavItem {
   href: string;
   label: string;
-  cursor: string;
+  cursor: CursorLabel;
+
+ 
+  description: string;
 }
 
 export const navItems: NavItem[] = [
   {
     href: "/collections",
     label: "Collections",
-    cursor: "GO",
+    cursor: CursorLabels.ENTER,
+  
+    description:
+      "Explore every House Eleven collection, from Residence to future chapters. Each garment is presented as part of a living editorial archive.",
   },
-  {
-    href: "/manifesto",
-    label: "Manifesto",
-    cursor: "READ",
-  },
+
   {
     href: "/journal",
     label: "Journal",
-    cursor: "GO",
+    cursor: CursorLabels.READ,
+    
+    description:
+      "Notes, observations, conversations and visual essays documenting the evolving language of the House.",
   },
+
+  {
+    href: "/archive",
+    label: "Archive",
+    cursor: CursorLabels.VIEW,
+    
+    description:
+      "Every collection begins long before production. The Archive preserves sketches, ideas, references and the evolution behind each chapter.",
+  },
+
+  {
+    href: "/about",
+    label: "About",
+    cursor: CursorLabels.VIEW,
+    
+    description:
+      "Discover the philosophy of House Eleven—an approach to clothing shaped by restraint, proportion and permanence rather than trend.",
+  },
+
   {
     href: "/residents",
     label: "Residents",
-    cursor: "GO",
+    cursor: CursorLabels.MEET,
+   
+    description:
+      "The people, collaborators and community who give life to the House beyond the garments themselves.",
   },
 ];

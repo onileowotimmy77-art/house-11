@@ -7,7 +7,7 @@ import EditorialTransition from "@/components/ui/EditorialTranstion";
 import Journal from "@/components/journal/Journal";
 import Residents from "@/components/residents/Residents";
 import Finale from "@/components/finale/Finale";
-import MenuOverlay from "@/components/navigation/MenuOverlay";
+
 
 
 
@@ -19,7 +19,7 @@ export default function Home() {
       <Loader />
       <Navbar />
 
-      <MenuOverlay />
+    
 
       <Hero />
 

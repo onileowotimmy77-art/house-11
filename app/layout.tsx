@@ -14,6 +14,7 @@ import {
   editorial,
 } from "./fonts";
 import { MenuProvider } from "@/components/navigation/MenuProvider";
+import Concierge from "@/components/navigation/Concierge";
 
 
 
@@ -64,8 +65,10 @@ export default function RootLayout({
               <CursorProvider>
                 <AnimationProvider>
                   <Cursor />
+                  
                 
                   <LenisProvider>
+                    <Concierge />
                     {children}
                   </LenisProvider>
               

@@ -3,9 +3,10 @@
 import Magnetic from "@/components/motion/Magnetic";
 import useCursorTarget from "@/components/cursor/useCursorTarget";
 import { useMenu } from "./MenuProvider";
+import { CursorLabels } from "@/lib/cursor";
 
 export default function NavButton() {
-  const cursor = useCursorTarget("MENU");
+  const cursor = useCursorTarget(CursorLabels.MENU);
   const { toggleMenu } = useMenu();
 
   return (

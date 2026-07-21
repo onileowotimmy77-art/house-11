@@ -4,9 +4,10 @@ import Link from "next/link";
 
 import Magnetic from "@/components/motion/Magnetic";
 import useCursorTarget from "@/components/cursor/useCursorTarget";
+import { CursorLabels } from "@/lib/cursor";
 
 export default function NavLogo() {
-  const cursor = useCursorTarget("HOME");
+  const cursor = useCursorTarget(CursorLabels.HOME);
 
   return (
     <Magnetic>

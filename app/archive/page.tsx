@@ -2,6 +2,8 @@ import {
   ArchiveThreshold,
   ArchivePrologue,
   ArchiveTimeline,
+ 
+  ArchiveChapter,
 } from "@/components/archive";
 
 export default function ArchivePage() {
@@ -12,6 +14,11 @@ export default function ArchivePage() {
       <ArchivePrologue />
 
       <ArchiveTimeline />
+
+      
+
+      <ArchiveChapter />
+
     </main>
   );
 }

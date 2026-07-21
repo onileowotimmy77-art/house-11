@@ -5,10 +5,12 @@ import Link from "next/link";
 import Magnetic from "@/components/motion/Magnetic";
 import useCursorTarget from "@/components/cursor/useCursorTarget";
 
+import { CursorLabel } from "@/lib/cursor";
+
 interface NavLinkProps {
   href: string;
   label: string;
-  cursor: string;
+  cursor: CursorLabel;
 }
 
 export default function NavLink({
