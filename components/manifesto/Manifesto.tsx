@@ -12,7 +12,7 @@ import ManifestoStatements from "./ManifestoStatements";
 export default function Manifesto() {
   
   return (
-    <Section padding="pt-40 pb-56">
+    <Section padding="xl">
       <Container>
 
         <ManifestoHeader />
