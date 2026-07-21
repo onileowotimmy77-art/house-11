@@ -11,7 +11,7 @@ import {
   Body,
 } from "@/components/ui/typography";
 
-import { fadeUp } from "@/lib/";
+import { fadeUp } from "@/lib/animations";
 
 export default function AboutHouse() {
   return (

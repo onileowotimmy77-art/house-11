@@ -11,7 +11,7 @@ import {
   Body,
 } from "@/components/ui/typography";
 
-import { fadeUp } from "@/lib/motion";
+import { fadeUp } from "@/lib/animations";
 
 const process = [
   "Observation",
@@ -24,7 +24,7 @@ const process = [
 
 export default function AboutProcess() {
   return (
-    <Section padding="py-56">
+    <Section customPadding="py-56">
       <Container>
 
         <motion.div
