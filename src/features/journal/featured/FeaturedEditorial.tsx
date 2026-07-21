@@ -12,8 +12,7 @@ import {
   Eyebrow,
 } from "@/components/ui/typography";
 
-import FadeUp from "@/components/ui/FadeUp";
-import { imageReveal } from "@/lib/animations";
+
 
 const featuredEssay = {
   volume: "FEATURED ESSAY",
@@ -42,7 +41,7 @@ export default function FeaturedEditorial() {
         {/* LEFT */}
 
         <motion.div
-          {...FadeUp}
+        
           className="lg:col-span-5"
         >
           <Eyebrow>
@@ -100,7 +99,7 @@ export default function FeaturedEditorial() {
         {/* RIGHT */}
 
         <motion.div
-          {...imageReveal}
+         
           className="lg:col-span-7"
         >
           <div
