@@ -9,7 +9,7 @@ import { collections } from "@/data/collections";
 
 export default function CollectionsIndex() {
   return (
-    <Section padding="pb-56">
+    <Section customPadding="pb-56">
       <Container>
         <div className="border-t border-white/10">
           {collections.map((collection) => (
