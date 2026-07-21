@@ -8,6 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 import type { Product } from "@/src/data/products";
+import { Display } from "@/components/ui/typography";
 
 interface ProductHeroProps {
   product: Product;
@@ -123,7 +124,7 @@ const y = useTransform(
             "
           >
             {product.name}
-          </h1>
+          </Display>
         <p
   className="
     mt-16
