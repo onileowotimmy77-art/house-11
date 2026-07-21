@@ -8,7 +8,7 @@ import Container from "@/components/layout/Container";
 
 import JournalContent from "./JournalContent";
 
-import { FadeUp
+import FadeUp from "@/components/ui/FadeUp";
 
 export default function JournalHero() {
   return (
