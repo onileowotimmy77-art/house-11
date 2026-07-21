@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useAppTransition } from "../providers/AppTransitionProvider";
+import { MotionDuration } from "@/lib/animation/token";
 
 interface EntranceProps {
   children: React.ReactNode;
@@ -32,7 +33,7 @@ export default function Entrance({
           : {}
       }
       transition={{
-        duration: Mo,
+        duration: MotionDuration.standard,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
