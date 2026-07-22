@@ -14,7 +14,7 @@ export default function CheckoutSection() {
 
           <CheckoutIdentity />
 
-          {/* Delivery */}
+          <Check
 
           {/* Payment */}
 
