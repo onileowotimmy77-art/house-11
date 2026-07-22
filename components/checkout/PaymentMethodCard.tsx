@@ -1,62 +1,89 @@
 "use client";
 
-import { useState } from "react";
+import clsx from "clsx";
 
-import Reveal from "@/components/motion/Reveal";
+interface PaymentMethodCardProps {
+  title: string;
+  description: string;
+  selected?: boolean;
+  onClick?: () => void;
+}
 
-import {
-  Eyebrow,
-  Display,
-  Body,
-} from "@/components/ui/typography";
-
-import PaymentMethodCard from "./PaymentMethodCard";
-
-export default function CheckoutPayment() {
-  const [method, setMethod] = useState("card");
-
+export default function PaymentMethodCard({
+  title,
+  description,
+  selected = false,
+  onClick,
+}: PaymentMethodCardProps) {
   return (
-    <section className="py-40">
+    <button
+      type="button"
+      onClick={onClick}
+      className={clsx(
+        `
+        w-full
 
-      <Reveal>
+        border
+        p-8
 
-        <Eyebrow>
-          Chapter III
-        </Eyebrow>
+        text-left
 
-        <Display className="mt-8">
-          Payment
-        </Display>
+        transition-all
+        duration-300
+        `,
+        selected
+          ? "border-white bg-white/[0.03]"
+          : "border-white/10 hover:border-white/30"
+      )}
+    >
+      <div className="flex items-start justify-between">
 
-        <Body
-          className="
-            mt-8
-            max-w-2xl
-          "
-        >
-          Choose how you'd like to complete your purchase.
-        </Body>
+        <div>
 
-      </Reveal>
+          <h3
+            className="
+              text-lg
+              font-medium
+              tracking-[-0.02em]
+            "
+          >
+            {title}
+          </h3>
 
-      <div className="mt-24 space-y-6">
+          <p
+            className="
+              mt-3
+              leading-7
+              text-white/50
+            "
+          >
+            {description}
+          </p>
 
-        <PaymentMethodCard
-          title="Debit / Credit Card"
-          description="Visa, Mastercard and supported payment providers."
-          selected={method === "card"}
-          onClick={() => setMethod("card")}
-        />
+        </div>
 
-        <PaymentMethodCard
-          title="Bank Transfer"
-          description="Complete your purchase through a verified bank transfer."
-          selected={method === "bank"}
-          onClick={() => setMethod("bank")}
+        <div
+          className={clsx(
+            `
+            mt-1
+
+            h-4
+            w-4
+
+            rounded-full
+            border
+
+            transition-all
+            duration-300
+            `,
+            selected
+              ? "border-white bg-white"
+              : "border-white/25"
+          )}
         />
 
       </div>
 
-    </section>
+    </button>
   );
 }
