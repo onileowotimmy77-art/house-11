@@ -59,7 +59,6 @@ export default function CheckoutProgress() {
         </div>
 
       </Reveal>
-
-    </Container>
+     </Container>
   );
 }
