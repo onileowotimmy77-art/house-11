@@ -135,7 +135,7 @@ export default function FeaturedResidence() {
             hover:text-white
           "
         >
-          Explore
+          View Piece
           <span>→</span>
         </Link>
       </div>
