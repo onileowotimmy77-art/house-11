@@ -5,7 +5,7 @@ import { getCollection } from "@/src/data/getCollection";
 
 
 export default function ResidenceGrid() {
-  const products = getCollection("Residence")
+  const products = getCollection("Residence");
   return (
     <>
     
