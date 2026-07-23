@@ -59,6 +59,7 @@ export default function ResidenceGrid() {
                 className={item.className}
               >
                 <GalleryItem
+                price=""
                   editorial
                   eyebrow={item.eyebrow}
                   title={product.name}
