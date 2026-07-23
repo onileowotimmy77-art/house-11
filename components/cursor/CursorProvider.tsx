@@ -7,7 +7,7 @@ import {
   ReactNode,
 } from "react";
 
-import {  }
+import { usePathname } from "next/navigation";
 
 type CursorContextType = {
   label: string;
