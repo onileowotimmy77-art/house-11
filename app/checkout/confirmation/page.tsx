@@ -14,7 +14,8 @@ export default function ConfirmationPage() {
   return (
     <>
       <CommerceHeader
-
+        eyebrow=""
+        description=""
         title="Confirmation"
       />
 
