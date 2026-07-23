@@ -153,6 +153,7 @@ export const products: Product[] = [
 
 {
   slug: "double-layered-sweatshirt",
+  order: 2,
 
   name: "Double Layered Sweatshirt",
 
@@ -253,6 +254,7 @@ export const products: Product[] = [
 
 {
   slug: "residence-tee",
+  order: 3,
 
   name: "Residence Tee",
 
@@ -362,6 +364,7 @@ export const products: Product[] = [
 
 {
   slug: "house11-reflective-tank-top",
+  order: 5,
 
   name: "House 11 Reflective Tank Top",
 
