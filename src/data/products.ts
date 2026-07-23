@@ -143,7 +143,9 @@ export const products: Product[] = [
       },
     ],
   },
-];
+
+
+//Residence Sweatshirt
 
 {
   slug: "double-layered-sweatshirt",
