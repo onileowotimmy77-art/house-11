@@ -1,6 +1,8 @@
 "use client";
 
 import GalleryItem from "@/src/features/chapter01/ResidenceShowcase/CollectionGalleryItem";
+import { getCollection } from "@/src/data/getCollection";
+
 
 export default function ResidenceGrid() {
   return (
