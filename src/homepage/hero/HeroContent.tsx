@@ -3,11 +3,19 @@
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
 import Entrance from "@/components/motion/Entrance";
-import useCursorTarget from "../../../components/cursor/useCursorTarget";
+
+import useCursorTarget from "@/components/cursor/useCursorTarget";
 import { CursorLabels } from "@/lib/cursor";
+
+import { useEntrance } from "@/components/entrance/EntranceProvider";
 
 export default function HeroContent() {
   const enterCursor = useCursorTarget(CursorLabels.ENTER);
+
+  const {
+    entranceState,
+    enterHouse,
+  } = useEntrance();
 
   return (
     <Container className="h-full">
@@ -60,8 +68,8 @@ export default function HeroContent() {
                 text-white/65
               "
             >
-              A modern luxury fashion house crafting timeless essentials for
-              ambitious individuals.
+              A modern luxury fashion house crafting timeless essentials
+              for ambitious individuals.
             </p>
           </Entrance>
 
@@ -75,9 +83,12 @@ export default function HeroContent() {
                   text-[10px]
                   tracking-[0.42em]
                 "
-                
+                disabled={entranceState !== "idle"}
+                onClick={enterHouse}
               >
-                ENTER THE HOUSE
+                {entranceState === "welcome"
+                  ? "WELCOME HOME"
+                  : "ENTER THE HOUSE"}
               </Button>
             </div>
           </Entrance>
