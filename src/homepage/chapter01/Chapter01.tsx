@@ -5,7 +5,7 @@ import Container from "@/components/layout/Container";
 
 
 import ChapterCampaign from "./ChapterCampaign";
-import ResidenceShowcase from "@/src/homepage/ResidenceShowcase/ResidenceShowcase";
+import ResidenceShowcase from "@/src/homepage/chapter01/ResidenceShowcase/ResidenceShowcase";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Transition from "../../features/transition/Transition";
 
