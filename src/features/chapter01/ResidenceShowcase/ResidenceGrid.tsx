@@ -3,7 +3,7 @@
 import GalleryItem from "@/src/features/chapter01/ResidenceShowcase/CollectionGalleryItem";
 import { getCollection } from "@/src/data/getCollection";
 import Link from "next/link";
-
+import EditorialLink from "@/components/ui/EditorialLink";
 
 export default function ResidenceGrid() {
   const products = getCollection("Residence").filter(
