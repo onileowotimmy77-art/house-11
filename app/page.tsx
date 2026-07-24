@@ -26,10 +26,10 @@ export default function Home() {
       <Chapter01 />
 
       <EditorialTransition
-        eyebrow="Journal"
-        title="The Conversation Continues"
-        description="Essays, campaigns and conversations shaping the future of House Eleven."
-      />
+  eyebrow="FROM GARMENTS TO IDEAS"
+  title="Every House Begins With a Philosophy"
+  description="House Eleven exists beyond the garments themselves. Every collection begins with an idea, a question, and a belief that clothing should outlive seasons. The Journal is where those ideas are documented."
+/>
 
       <Journal />
 
