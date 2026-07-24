@@ -10,6 +10,10 @@ export function unregisterLenis() {
   lenisInstance = null;
 }
 
+export function getLenis() {
+  return lenisInstance;
+}
+
 export function stopLenis() {
   lenisInstance?.stop();
 }
