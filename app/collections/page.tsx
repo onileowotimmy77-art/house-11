@@ -1,5 +1,5 @@
-import CollectionsHero from "@/components/collections/CollectionsHero";
-import CollectionsIndex from "@/components/collections/CollectionsIndex";
+import CollectionsHero from "@/components/homepage/collections/CollectionsHero";
+import CollectionsIndex from "@/components/homepage/collections/CollectionsIndex";
 
 export default function CollectionsPage() {
   return (

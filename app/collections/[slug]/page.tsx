@@ -2,11 +2,11 @@ import { notFound } from "next/navigation";
 
 import { collections } from "@/data/collections";
 
-import CollectionHero from "@/components/collections/CollectionHero";
-import CollectionStory from "@/components/collections/CollectionStory";
-import CollectionQuote from "@/components/collections/CollectionQuote";
-import CollectionCampaign from "@/components/collections/CollectionsCampaign";
-import CollectionPieces from "@/components/collections/CollectionPieces";
+import CollectionHero from "@/components/homepage/collections/CollectionHero";
+import CollectionStory from "@/components/homepage/collections/CollectionStory";
+import CollectionQuote from "@/components/homepage/collections/CollectionQuote";
+import CollectionCampaign from "@/components/homepage/collections/CollectionsCampaign";
+import CollectionPieces from "@/components/homepage/collections/CollectionPieces";
 
 interface PageProps {
   params: Promise<{
