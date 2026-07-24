@@ -38,11 +38,18 @@ export function EntranceProvider({
   ] = useState<EntranceState>("idle");
 
   function enterHouse() {
-    if (entranceState !== "idle") return;
+  if (entranceState !== "idle") return;
 
-    setEntranceState("preparing");
-  }
+  setEntranceState("preparing");
 
+  window.setTimeout(() => {
+    setEntranceState("welcome");
+  }, 350);
+
+  window.setTimeout(() => {
+    setEntranceState("transitioning");
+  }, 950);
+}
   return (
     <EntranceContext.Provider
       value={{
