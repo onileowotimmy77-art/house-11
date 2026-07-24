@@ -77,7 +77,45 @@ export default function ResidenceGrid() {
       <section className="mt-32"></section>
 
       {/* Chapter CTA */}
-      <section className="mt-32"></section>
+<section
+  className="
+    mt-32
+    flex
+    justify-center
+  "
+>
+  <Link
+    href="/collections/residence"
+    className="
+      inline-flex
+      items-center
+      gap-3
+
+      text-[11px]
+      uppercase
+      tracking-[0.45em]
+
+      text-white/60
+
+      transition-colors
+      duration-500
+
+      hover:text-white
+    "
+  >
+    Explore the Full Residence Collection
+
+    <span
+      className="
+        transition-transform
+        duration-500
+        group-hover:translate-x-1
+      "
+    >
+      →
+    </span>
+  </Link>
+</section>
     </>
   );
 }
