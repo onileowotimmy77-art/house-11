@@ -22,6 +22,7 @@ interface SectionProps {
 }
 
 export default function Section({
+  id,
   children,
   className = "",
   padding = "lg",
